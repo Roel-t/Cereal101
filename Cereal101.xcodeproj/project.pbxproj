@@ -12,6 +12,10 @@
 		45CC43E020788D54003A4BE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45CC43DE20788D54003A4BE1 /* Main.storyboard */; };
 		45CC43E220788D54003A4BE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45CC43E120788D54003A4BE1 /* Assets.xcassets */; };
 		45CC43E520788D54003A4BE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45CC43E320788D54003A4BE1 /* LaunchScreen.storyboard */; };
+		45CC43ED20789760003A4BE1 /* IngredientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CC43EC20789760003A4BE1 /* IngredientList.swift */; };
+		45CC43EF20789E09003A4BE1 /* FirstStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CC43EE20789E09003A4BE1 /* FirstStep.swift */; };
+		45CC43F120789EA7003A4BE1 /* SecondStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CC43F020789EA7003A4BE1 /* SecondStep.swift */; };
+		45CC43F320789ED1003A4BE1 /* FinalStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CC43F220789ED1003A4BE1 /* FinalStep.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		45CC43E120788D54003A4BE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45CC43E420788D54003A4BE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45CC43E620788D54003A4BE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45CC43EC20789760003A4BE1 /* IngredientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientList.swift; sourceTree = "<group>"; };
+		45CC43EE20789E09003A4BE1 /* FirstStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStep.swift; sourceTree = "<group>"; };
+		45CC43F020789EA7003A4BE1 /* SecondStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStep.swift; sourceTree = "<group>"; };
+		45CC43F220789ED1003A4BE1 /* FinalStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalStep.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				45CC43E120788D54003A4BE1 /* Assets.xcassets */,
 				45CC43E320788D54003A4BE1 /* LaunchScreen.storyboard */,
 				45CC43E620788D54003A4BE1 /* Info.plist */,
+				45CC43EC20789760003A4BE1 /* IngredientList.swift */,
+				45CC43EE20789E09003A4BE1 /* FirstStep.swift */,
+				45CC43F020789EA7003A4BE1 /* SecondStep.swift */,
+				45CC43F220789ED1003A4BE1 /* FinalStep.swift */,
 			);
 			path = Cereal101;
 			sourceTree = "<group>";
@@ -136,8 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45CC43F120789EA7003A4BE1 /* SecondStep.swift in Sources */,
 				45CC43DD20788D53003A4BE1 /* ViewController.swift in Sources */,
 				45CC43DB20788D53003A4BE1 /* AppDelegate.swift in Sources */,
+				45CC43EF20789E09003A4BE1 /* FirstStep.swift in Sources */,
+				45CC43F320789ED1003A4BE1 /* FinalStep.swift in Sources */,
+				45CC43ED20789760003A4BE1 /* IngredientList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,11 +290,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K82SGRRHFS;
 				INFOPLIST_FILE = Cereal101/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = example.Cereal101;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,11 +308,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K82SGRRHFS;
 				INFOPLIST_FILE = Cereal101/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = example.Cereal101;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

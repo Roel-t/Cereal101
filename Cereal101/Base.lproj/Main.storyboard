@@ -1,24 +1,408 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MarkerFeltThin.ttf">
+            <string>MarkerFelt-Thin</string>
+        </array>
+        <array key="MarkerFeltWide.ttf">
+            <string>MarkerFelt-Wide</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cereal101" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="9ft-Dd-hla">
+                                <rect key="frame" x="0.0" y="407" width="375" height="267"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="267" id="xGO-Sv-Wcf"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kitcken" translatesAutoresizingMaskIntoConstraints="NO" id="2re-1D-R37">
+                                <rect key="frame" x="0.0" y="100" width="375" height="393"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="393" id="HNT-V7-iFw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Make Cereal" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLD-s0-6U5">
+                                <rect key="frame" x="26" y="20" width="324" height="49"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="37"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oV4-fq-ZRX">
+                                <rect key="frame" x="138" y="407" width="100" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6PR-hJ-3br"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="EoA-J0-xvG"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Learn Now!">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="MarkerFelt-Wide"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="bGL-rT-5fz" kind="show" identifier="IngrListSegue" id="BdD-DE-UVm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.69833874702453613" green="0.84101730585098267" blue="0.72547614574432373" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="2re-1D-R37" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3tz-5N-ayR"/>
+                            <constraint firstItem="oV4-fq-ZRX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5eT-iK-1hb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oV4-fq-ZRX" secondAttribute="bottom" constant="200" id="6Lz-vh-Zar"/>
+                            <constraint firstItem="gLD-s0-6U5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="97F-XJ-iaR"/>
+                            <constraint firstItem="9ft-Dd-hla" firstAttribute="top" secondItem="oV4-fq-ZRX" secondAttribute="top" id="9d4-JV-iDn"/>
+                            <constraint firstItem="gLD-s0-6U5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Xq2-OF-bTM"/>
+                            <constraint firstItem="2re-1D-R37" firstAttribute="trailing" secondItem="9ft-Dd-hla" secondAttribute="trailing" id="e7S-Aw-Arm"/>
+                            <constraint firstItem="2re-1D-R37" firstAttribute="leading" secondItem="9ft-Dd-hla" secondAttribute="leading" id="fuj-79-fAS"/>
+                            <constraint firstItem="2re-1D-R37" firstAttribute="top" secondItem="gLD-s0-6U5" secondAttribute="bottom" constant="31" id="k4O-HV-wle"/>
+                            <constraint firstItem="9ft-Dd-hla" firstAttribute="centerX" secondItem="oV4-fq-ZRX" secondAttribute="centerX" id="tdg-qa-Ovz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="LearnNowButton" destination="oV4-fq-ZRX" id="xxl-us-C0a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20" y="41.829085457271368"/>
+        </scene>
+        <!--Ingredient List-->
+        <scene sceneID="qmN-4E-KuU">
+            <objects>
+                <viewController id="bGL-rT-5fz" customClass="IngredientList" customModule="Cereal101" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tdy-3z-LNL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green_background" translatesAutoresizingMaskIntoConstraints="NO" id="AVH-Qj-5h3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cereal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aoa-O4-A2p">
+                                <rect key="frame" x="238" y="363" width="121" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2hT-RI-J2k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Milk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYw-vl-NAH">
+                                <rect key="frame" x="238" y="275" width="121" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="tUI-HY-SVO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wA-5L-dfb">
+                                <rect key="frame" x="75" y="70" width="225" height="47"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nuk-3F-SYH">
+                                <rect key="frame" x="261" y="591" width="98" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                <color key="tintColor" red="0.99390757607858071" green="0.98021260779101682" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sz4-As-j9t" kind="show" identifier="FirstStepSegue" id="1o4-DE-sia"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- - - -" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ai-cP-gPR">
+                                <rect key="frame" x="32" y="145" width="13" height="356"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="13" id="CQh-yf-AXV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="69"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bowl_empty" translatesAutoresizingMaskIntoConstraints="NO" id="YE7-FW-h2u">
+                                <rect key="frame" x="76" y="157" width="154" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="milk" translatesAutoresizingMaskIntoConstraints="NO" id="J6Q-cV-MoY">
+                                <rect key="frame" x="76" y="245" width="154" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CerealBox" translatesAutoresizingMaskIntoConstraints="NO" id="Kjj-yX-3vs">
+                                <rect key="frame" x="76" y="333" width="154" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spoon" translatesAutoresizingMaskIntoConstraints="NO" id="KOv-ed-t0k">
+                                <rect key="frame" x="76" y="421" width="154" height="80"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bowl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ws1-I2-tnf">
+                                <rect key="frame" x="238" y="187" width="121" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5nG-Ud-y9o"/>
+                                    <constraint firstAttribute="width" constant="121" id="Pg8-zN-JC4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spoon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="py8-vG-3V3">
+                                <rect key="frame" x="238" y="451" width="121" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="E0d-L3-E5N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.69833874702453613" green="0.84101730585098267" blue="0.72547614574432373" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Aoa-O4-A2p" firstAttribute="top" secondItem="GYw-vl-NAH" secondAttribute="bottom" constant="67" id="0TV-6K-6U2"/>
+                            <constraint firstItem="Aoa-O4-A2p" firstAttribute="leading" secondItem="Kjj-yX-3vs" secondAttribute="trailing" constant="8" symbolic="YES" id="2bo-lW-mYW"/>
+                            <constraint firstItem="py8-vG-3V3" firstAttribute="top" secondItem="Aoa-O4-A2p" secondAttribute="bottom" constant="67" id="3Jx-nj-xXZ"/>
+                            <constraint firstItem="YE7-FW-h2u" firstAttribute="leading" secondItem="J6Q-cV-MoY" secondAttribute="leading" id="4MB-HF-mnb"/>
+                            <constraint firstItem="Kjj-yX-3vs" firstAttribute="leading" secondItem="KOv-ed-t0k" secondAttribute="leading" id="4YK-nR-q8b"/>
+                            <constraint firstItem="KOv-ed-t0k" firstAttribute="top" secondItem="Kjj-yX-3vs" secondAttribute="bottom" constant="8" symbolic="YES" id="6Bb-Pa-NF3"/>
+                            <constraint firstItem="6ai-cP-gPR" firstAttribute="top" secondItem="WZj-8u-3aC" secondAttribute="top" constant="125" id="6gH-dy-woJ"/>
+                            <constraint firstItem="YE7-FW-h2u" firstAttribute="top" secondItem="4wA-5L-dfb" secondAttribute="bottom" constant="40" id="92d-yg-DYv"/>
+                            <constraint firstItem="J6Q-cV-MoY" firstAttribute="centerY" secondItem="GYw-vl-NAH" secondAttribute="centerY" id="CwE-SM-xWe"/>
+                            <constraint firstItem="J6Q-cV-MoY" firstAttribute="leading" secondItem="Kjj-yX-3vs" secondAttribute="leading" id="GpF-bz-Ecp"/>
+                            <constraint firstItem="Kjj-yX-3vs" firstAttribute="top" secondItem="J6Q-cV-MoY" secondAttribute="bottom" constant="8" symbolic="YES" id="IUV-lY-83y"/>
+                            <constraint firstItem="ws1-I2-tnf" firstAttribute="trailing" secondItem="GYw-vl-NAH" secondAttribute="trailing" id="JLh-LX-TLt"/>
+                            <constraint firstItem="KOv-ed-t0k" firstAttribute="centerY" secondItem="py8-vG-3V3" secondAttribute="centerY" id="LuQ-FQ-yZQ"/>
+                            <constraint firstItem="GYw-vl-NAH" firstAttribute="top" secondItem="ws1-I2-tnf" secondAttribute="bottom" constant="67" id="MDV-74-n4o"/>
+                            <constraint firstItem="ws1-I2-tnf" firstAttribute="leading" secondItem="YE7-FW-h2u" secondAttribute="trailing" constant="8" symbolic="YES" id="MaD-l4-Roc"/>
+                            <constraint firstItem="AVH-Qj-5h3" firstAttribute="top" secondItem="tdy-3z-LNL" secondAttribute="top" id="N2S-Mb-a9S"/>
+                            <constraint firstItem="GYw-vl-NAH" firstAttribute="leading" secondItem="Aoa-O4-A2p" secondAttribute="leading" id="Pnq-VE-yOW"/>
+                            <constraint firstItem="6ai-cP-gPR" firstAttribute="bottom" secondItem="KOv-ed-t0k" secondAttribute="bottom" id="RhB-dC-vvJ"/>
+                            <constraint firstItem="AVH-Qj-5h3" firstAttribute="leading" secondItem="tdy-3z-LNL" secondAttribute="leading" id="SZ8-OL-X7q"/>
+                            <constraint firstAttribute="trailing" secondItem="AVH-Qj-5h3" secondAttribute="trailing" id="Xuj-Fj-I1p"/>
+                            <constraint firstItem="6ai-cP-gPR" firstAttribute="leading" secondItem="WZj-8u-3aC" secondAttribute="leading" constant="32" id="byD-Ux-ZuQ"/>
+                            <constraint firstItem="J6Q-cV-MoY" firstAttribute="top" secondItem="YE7-FW-h2u" secondAttribute="bottom" constant="8" symbolic="YES" id="c7e-4h-099"/>
+                            <constraint firstItem="ws1-I2-tnf" firstAttribute="leading" secondItem="GYw-vl-NAH" secondAttribute="leading" id="dNn-UB-2lS"/>
+                            <constraint firstItem="GYw-vl-NAH" firstAttribute="leading" secondItem="J6Q-cV-MoY" secondAttribute="trailing" constant="8" symbolic="YES" id="fhn-HI-s5K"/>
+                            <constraint firstItem="4wA-5L-dfb" firstAttribute="centerX" secondItem="WZj-8u-3aC" secondAttribute="centerX" id="fuu-fz-6GS"/>
+                            <constraint firstItem="ws1-I2-tnf" firstAttribute="trailing" secondItem="tdy-3z-LNL" secondAttribute="trailingMargin" id="icK-7k-6Ar"/>
+                            <constraint firstItem="Aoa-O4-A2p" firstAttribute="trailing" secondItem="py8-vG-3V3" secondAttribute="trailing" id="j1V-YK-ZnQ"/>
+                            <constraint firstItem="YE7-FW-h2u" firstAttribute="leading" secondItem="6ai-cP-gPR" secondAttribute="trailing" constant="31" id="kAb-Ml-zYx"/>
+                            <constraint firstItem="Kjj-yX-3vs" firstAttribute="centerY" secondItem="Aoa-O4-A2p" secondAttribute="centerY" id="qwA-Zg-QCZ"/>
+                            <constraint firstItem="GYw-vl-NAH" firstAttribute="trailing" secondItem="Aoa-O4-A2p" secondAttribute="trailing" id="tbx-XI-DyM"/>
+                            <constraint firstItem="YE7-FW-h2u" firstAttribute="centerY" secondItem="ws1-I2-tnf" secondAttribute="centerY" id="vvg-jI-KtZ"/>
+                            <constraint firstItem="py8-vG-3V3" firstAttribute="leading" secondItem="KOv-ed-t0k" secondAttribute="trailing" constant="8" symbolic="YES" id="x6J-Cn-dYt"/>
+                            <constraint firstItem="AVH-Qj-5h3" firstAttribute="bottom" secondItem="WZj-8u-3aC" secondAttribute="bottom" id="xE7-rY-ZdK"/>
+                            <constraint firstItem="4wA-5L-dfb" firstAttribute="top" secondItem="WZj-8u-3aC" secondAttribute="top" constant="50" id="xWs-7L-DhC"/>
+                            <constraint firstItem="ws1-I2-tnf" firstAttribute="top" secondItem="4wA-5L-dfb" secondAttribute="bottom" constant="70" id="xgY-53-wMv"/>
+                            <constraint firstItem="Aoa-O4-A2p" firstAttribute="leading" secondItem="py8-vG-3V3" secondAttribute="leading" id="ykk-Js-9cd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WZj-8u-3aC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fx-aw-rDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="837.60000000000002" y="41.829085457271368"/>
+        </scene>
+        <!--First Step-->
+        <scene sceneID="ibL-3u-ol5">
+            <objects>
+                <viewController id="sz4-As-j9t" customClass="FirstStep" customModule="Cereal101" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NKI-Nf-T4Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green_background" translatesAutoresizingMaskIntoConstraints="NO" id="OB9-7K-QD1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step 1: Get your bowl and pour milk on it" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAT-pr-RGE">
+                                <rect key="frame" x="16" y="28" width="343" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Be careful not to pour too much!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Plh-n0-z7n">
+                                <rect key="frame" x="16" y="94" width="343" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                <color key="textColor" red="1" green="0.086269882355077598" blue="0.025373078771439128" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bowl_empty" translatesAutoresizingMaskIntoConstraints="NO" id="Pb9-bz-OtJ">
+                                <rect key="frame" x="248" y="393" width="111" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="milk" translatesAutoresizingMaskIntoConstraints="NO" id="F6r-bA-uHg">
+                                <rect key="frame" x="16" y="393" width="73" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGH-Mj-QsX">
+                                <rect key="frame" x="16" y="591" width="98" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40m-nn-kCY">
+                                <rect key="frame" x="261" y="591" width="98" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cW5-7A-rHV" kind="show" identifier="SecondStepSegue" id="Ge8-XP-COC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eLh-id-RoU"/>
+                    </view>
+                    <connections>
+                        <outlet property="Bowl" destination="Pb9-bz-OtJ" id="HvS-kC-gQK"/>
+                        <outlet property="Milk" destination="F6r-bA-uHg" id="PVp-z1-aMG"/>
+                        <outlet property="NextButton" destination="40m-nn-kCY" id="hsR-vq-Tsr"/>
+                        <outlet property="ResetButton" destination="QGH-Mj-QsX" id="ts9-4D-L1o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uSX-kE-yTK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1560.8" y="41.829085457271368"/>
+        </scene>
+        <!--Second Step-->
+        <scene sceneID="ymB-wx-aU6">
+            <objects>
+                <viewController id="cW5-7A-rHV" customClass="SecondStep" customModule="Cereal101" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yCV-Wz-mOu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green_background" translatesAutoresizingMaskIntoConstraints="NO" id="y7I-Q7-QOp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step 2: Get your cereal and pour it on your bowl" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atx-0h-wWD">
+                                <rect key="frame" x="16" y="28" width="343" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CerealBox" translatesAutoresizingMaskIntoConstraints="NO" id="3oq-YD-bzY">
+                                <rect key="frame" x="49" y="315" width="91" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bowl_milk" translatesAutoresizingMaskIntoConstraints="NO" id="pBE-YJ-IZ8">
+                                <rect key="frame" x="248" y="393" width="111" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBl-FD-nh0">
+                                <rect key="frame" x="261" y="591" width="98" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zAv-Hb-qmS" kind="show" identifier="FinalStepSegue" id="Nl4-ty-VLx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4xF-h4-TMl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qp5-4n-9PA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2320.8000000000002" y="41.829085457271368"/>
+        </scene>
+        <!--Final Step-->
+        <scene sceneID="cyP-h7-gB3">
+            <objects>
+                <viewController id="zAv-Hb-qmS" customClass="FinalStep" customModule="Cereal101" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pI9-dN-EtP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green_background" translatesAutoresizingMaskIntoConstraints="NO" id="Vrf-kp-P1u">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Final Step: Get your Spoon and enjoy your cereal!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uID-40-wy0">
+                                <rect key="frame" x="10" y="28" width="343" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bowl_full" translatesAutoresizingMaskIntoConstraints="NO" id="aTF-HY-ph9">
+                                <rect key="frame" x="248" y="393" width="111" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bo-J3-eJu">
+                                <rect key="frame" x="261" y="591" width="98" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="spoon" translatesAutoresizingMaskIntoConstraints="NO" id="yIs-e4-iP2">
+                                <rect key="frame" x="59" y="393" width="45" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ynp-hz-tZK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xsL-1K-Kw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3029.5999999999999" y="41.829085457271368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CerealBox" width="410" height="440"/>
+        <image name="Kitcken" width="2400" height="2400"/>
+        <image name="background" width="504" height="360"/>
+        <image name="bowl_empty" width="340" height="230"/>
+        <image name="bowl_full" width="340" height="230"/>
+        <image name="bowl_milk" width="340" height="230"/>
+        <image name="green_background" width="2400" height="332"/>
+        <image name="milk" width="180" height="305"/>
+        <image name="spoon" width="74" height="178"/>
+    </resources>
 </document>
