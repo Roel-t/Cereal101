@@ -10,6 +10,9 @@ import UIKit
 
 class IngredientList: UIViewController {
 
+    @IBAction func BackButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

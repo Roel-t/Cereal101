@@ -1,5 +1,5 @@
 //
-//  FirstStep.swift
+//  SecondStep.swift
 //  Cereal101
 //
 //  Created by Roel Tijerina on 4/7/18.
@@ -10,37 +10,13 @@ import UIKit
 
 class FirstStep: UIViewController {
 
-    @IBOutlet weak var Milk: UIImageView!
-    @IBOutlet weak var Bowl: UIImageView!
-    @IBOutlet weak var NextButton: UIButton!
-    @IBOutlet weak var ResetButton: UIButton!
-    
-    var location = CGPoint(x: 0, y: 0)
- 
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        var touch : UITouch! =  touches.first! as UITouch
-        if touch.view == Milk
-        {
-            location = touch.location(in: self.view)
-            Milk.center = location
-        }
+    @IBAction func BackButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        var touch : UITouch! =  touches.first! as UITouch
-        if touch.view == Milk
-        {
-            location = touch.location(in: self.view)
-            Milk.center = location
-        }
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        Milk.isUserInteractionEnabled = true
-        
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

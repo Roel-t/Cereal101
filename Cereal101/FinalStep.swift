@@ -10,6 +10,15 @@ import UIKit
 
 class FinalStep: UIViewController {
 
+   
+    @IBAction func BackButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func MainMenu(_ sender: Any) {
+        self.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
