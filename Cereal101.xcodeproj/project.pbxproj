@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4555D0E420845AA10070DDEC /* pour.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4555D0E320845AA10070DDEC /* pour.mp3 */; };
+		4555D0E620845AAB0070DDEC /* winner.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4555D0E520845AAB0070DDEC /* winner.mp3 */; };
+		4555D0E820845C410070DDEC /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4555D0E720845C410070DDEC /* background.mp3 */; };
 		45CC43DB20788D53003A4BE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CC43DA20788D53003A4BE1 /* AppDelegate.swift */; };
 		45CC43DD20788D53003A4BE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CC43DC20788D53003A4BE1 /* ViewController.swift */; };
 		45CC43E020788D54003A4BE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45CC43DE20788D54003A4BE1 /* Main.storyboard */; };
@@ -16,9 +19,16 @@
 		45CC43EF20789E09003A4BE1 /* SecondStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CC43EE20789E09003A4BE1 /* SecondStep.swift */; };
 		45CC43F120789EA7003A4BE1 /* FirstStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CC43F020789EA7003A4BE1 /* FirstStep.swift */; };
 		45CC43F320789ED1003A4BE1 /* FinalStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CC43F220789ED1003A4BE1 /* FinalStep.swift */; };
+		45FA555F20829C4A00CABCFF /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 45FA555E20829C4A00CABCFF /* sample.mp3 */; };
+		45FA556120829EFC00CABCFF /* introSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 45FA556020829EFC00CABCFF /* introSong.mp3 */; };
+		A974B759D293C62A7C4E9F36 /* libPods-Cereal101.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D437CE1805A352CA6934C123 /* libPods-Cereal101.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F824C16799D57448A29BE0E /* Pods-Cereal101.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cereal101.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cereal101/Pods-Cereal101.debug.xcconfig"; sourceTree = "<group>"; };
+		4555D0E320845AA10070DDEC /* pour.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pour.mp3; sourceTree = "<group>"; };
+		4555D0E520845AAB0070DDEC /* winner.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winner.mp3; sourceTree = "<group>"; };
+		4555D0E720845C410070DDEC /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		45CC43D720788D53003A4BE1 /* Cereal101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cereal101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45CC43DA20788D53003A4BE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45CC43DC20788D53003A4BE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +40,10 @@
 		45CC43EE20789E09003A4BE1 /* SecondStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStep.swift; sourceTree = "<group>"; };
 		45CC43F020789EA7003A4BE1 /* FirstStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStep.swift; sourceTree = "<group>"; };
 		45CC43F220789ED1003A4BE1 /* FinalStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalStep.swift; sourceTree = "<group>"; };
+		45FA555E20829C4A00CABCFF /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
+		45FA556020829EFC00CABCFF /* introSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = introSong.mp3; sourceTree = "<group>"; };
+		D437CE1805A352CA6934C123 /* libPods-Cereal101.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cereal101.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F819B347CEDBFA31FC3C9C16 /* Pods-Cereal101.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cereal101.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cereal101/Pods-Cereal101.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A974B759D293C62A7C4E9F36 /* libPods-Cereal101.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +63,8 @@
 			children = (
 				45CC43D920788D53003A4BE1 /* Cereal101 */,
 				45CC43D820788D53003A4BE1 /* Products */,
+				BF2EAF1EB4B6F18A17A58ABE /* Pods */,
+				9FB713F187FBF0D34B546CBC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +79,7 @@
 		45CC43D920788D53003A4BE1 /* Cereal101 */ = {
 			isa = PBXGroup;
 			children = (
+				45FA55592082995C00CABCFF /* Music */,
 				45CC43DA20788D53003A4BE1 /* AppDelegate.swift */,
 				45CC43DC20788D53003A4BE1 /* ViewController.swift */,
 				45CC43DE20788D54003A4BE1 /* Main.storyboard */,
@@ -76,6 +94,35 @@
 			path = Cereal101;
 			sourceTree = "<group>";
 		};
+		45FA55592082995C00CABCFF /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				4555D0E520845AAB0070DDEC /* winner.mp3 */,
+				4555D0E720845C410070DDEC /* background.mp3 */,
+				4555D0E320845AA10070DDEC /* pour.mp3 */,
+				45FA556020829EFC00CABCFF /* introSong.mp3 */,
+				45FA555E20829C4A00CABCFF /* sample.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		9FB713F187FBF0D34B546CBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D437CE1805A352CA6934C123 /* libPods-Cereal101.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF2EAF1EB4B6F18A17A58ABE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F824C16799D57448A29BE0E /* Pods-Cereal101.debug.xcconfig */,
+				F819B347CEDBFA31FC3C9C16 /* Pods-Cereal101.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +130,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45CC43E920788D54003A4BE1 /* Build configuration list for PBXNativeTarget "Cereal101" */;
 			buildPhases = (
+				37D8CEB56E24BED8E967E605 /* [CP] Check Pods Manifest.lock */,
 				45CC43D320788D53003A4BE1 /* Sources */,
 				45CC43D420788D53003A4BE1 /* Frameworks */,
 				45CC43D520788D53003A4BE1 /* Resources */,
+				13F59D47361E64D70D1CF04E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,13 +184,57 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4555D0E620845AAB0070DDEC /* winner.mp3 in Resources */,
 				45CC43E520788D54003A4BE1 /* LaunchScreen.storyboard in Resources */,
 				45CC43E220788D54003A4BE1 /* Assets.xcassets in Resources */,
+				4555D0E420845AA10070DDEC /* pour.mp3 in Resources */,
+				4555D0E820845C410070DDEC /* background.mp3 in Resources */,
+				45FA556120829EFC00CABCFF /* introSong.mp3 in Resources */,
 				45CC43E020788D54003A4BE1 /* Main.storyboard in Resources */,
+				45FA555F20829C4A00CABCFF /* sample.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13F59D47361E64D70D1CF04E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Cereal101/Pods-Cereal101-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/SAConfettiView/SAConfettiView.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAConfettiView.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cereal101/Pods-Cereal101-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37D8CEB56E24BED8E967E605 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cereal101-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		45CC43D320788D53003A4BE1 /* Sources */ = {
@@ -288,6 +381,7 @@
 		};
 		45CC43EA20788D54003A4BE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F824C16799D57448A29BE0E /* Pods-Cereal101.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -306,6 +400,7 @@
 		};
 		45CC43EB20788D54003A4BE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F819B347CEDBFA31FC3C9C16 /* Pods-Cereal101.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
