@@ -1,0 +1,6 @@
+module Pods_Cereal101 [system] {
+  umbrella header "Pods-Cereal101-umbrella.h"
+
+  export *
+  module * { export * }
+}
