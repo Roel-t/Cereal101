@@ -7,24 +7,14 @@
 //
 
 import UIKit
-import AVFoundation
 
 class IngredientList: UIViewController {
 
-    @IBOutlet weak var BackButton: UIButton!
-    @IBOutlet weak var NextButton: UIButton!
     @IBAction func BackButton(_ sender: Any) {
-        AudioServicesPlaySystemSound (1105)
-
         self.dismiss(animated: true, completion: nil)
-    }
-    @IBAction func NextButton(_ sender: Any) {
-        AudioServicesPlaySystemSound (1104)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        BackButton.layer.cornerRadius = 4
-        NextButton.layer.cornerRadius = 4
 
         // Do any additional setup after loading the view.
     }
